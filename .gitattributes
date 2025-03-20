@@ -85,3 +85,4 @@
 /Conv2D_HW_InitVersion_Students/Conv2D_HW_HLS/solution1/solution1.log filter=lfs diff=lfs merge=lfs -text
 /Conv2D_HW_InitVersion_Students/Vivado.tcl filter=lfs diff=lfs merge=lfs -text
 /Conv2D_HW_InitVersion_Students/vitis_hls.log filter=lfs diff=lfs merge=lfs -text
+/Conv2D_HW_InitVersion_Students/Conv2D_HW_HLS/solution1/csim/build/csim.exe filter=lfs diff=lfs merge=lfs -text
