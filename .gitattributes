@@ -291,3 +291,4 @@
 /test1_HW_only/build_Vivado_project.sh filter=lfs diff=lfs merge=lfs -text
 /test1_HW_only/cleanup.sh filter=lfs diff=lfs merge=lfs -text
 /test1_HW_only/extractBitstream.sh filter=lfs diff=lfs merge=lfs -text
+/test1_HW_only/Conv2D_HW_Vivado.tcl filter=lfs diff=lfs merge=lfs -text
