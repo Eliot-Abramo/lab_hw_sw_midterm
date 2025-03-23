@@ -355,3 +355,4 @@
 /test2/build_Vivado_project.sh filter=lfs diff=lfs merge=lfs -text
 /test2/cleanup.sh filter=lfs diff=lfs merge=lfs -text
 /test2/extractBitstream.sh filter=lfs diff=lfs merge=lfs -text
+/test1_hwOnly/test1_results.png filter=lfs diff=lfs merge=lfs -text
