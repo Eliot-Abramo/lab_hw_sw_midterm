@@ -394,3 +394,4 @@
 /test2/IP-catalog/Conv_2D_HW_HLS/hdl/vhdl/Conv2D_HW_pixel_buffer_V_RAM_AUTO_1R1W.vhd filter=lfs diff=lfs merge=lfs -text
 /test2/IP-catalog/Conv_2D_HW_HLS/misc/logo.png filter=lfs diff=lfs merge=lfs -text
 /test2/IP-catalog/Conv_2D_HW_HLS/xgui/Conv2D_HW_v1_0.tcl filter=lfs diff=lfs merge=lfs -text
+/test2/test2_results.png filter=lfs diff=lfs merge=lfs -text
