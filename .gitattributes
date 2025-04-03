@@ -1561,3 +1561,5 @@
 /test1a_copy/build_Vivado_project.sh filter=lfs diff=lfs merge=lfs -text
 /test1a_copy/cleanup.sh filter=lfs diff=lfs merge=lfs -text
 /test1a_copy/extractBitstream.sh filter=lfs diff=lfs merge=lfs -text
+/test1/SW/model[[:space:]]copy.txt filter=lfs diff=lfs merge=lfs -text
+/test1/SW/model[[:space:]]copyh.txt filter=lfs diff=lfs merge=lfs -text
