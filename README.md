@@ -9,19 +9,33 @@
 ---
 
 ```mermaid
-graph TD
-    subgraph Host
-        pyhost[cnn_run.py]
-        dma[AXI DMA Driver]
+flowchart TB
+    subgraph Host_PS
+        direction LR
+        CNN_RUN["cnn_run.py"]
+        DMA_CTRL["AXI DMA Ctrl"]
     end
 
-    subgraph ProgrammableLogic
-        conv[conv2d_hw Kernel]
+    subgraph PL
+        direction LR
+        COEFF_BRAM["Coeff BRAM"]
+        LINE_BUFF["Line Buffers"]
+        CONV_IP["conv2d_hw Kernel"]
     end
 
-    img[[Input Image]] --> pyhost
-    pyhost --> dma --> conv
-    conv --> dma --> fmap[[Output Feature Map]]
+    subgraph Output
+        direction LR
+        OUT_FM["Output Feature Map"]
+    end
+
+    CNN_RUN -->|Control| DMA_CTRL
+    DMA_CTRL -->|Burst Read| LINE_BUFF
+    DMA_CTRL -->|Burst Read| COEFF_BRAM
+    COEFF_BRAM -->|Provide Coeffs| CONV_IP
+    LINE_BUFF -->|Provide Pixels| CONV_IP
+    CONV_IP -->|Burst Write| DMA_CTRL
+    DMA_CTRL -->|Write Back| OUT_FM
+
 ```
 
 ---
